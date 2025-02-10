@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>680</width>
+    <height>289</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="rock">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>70</y>
+      <width>110</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    background: rgb(61, 56, 70);</string>
+    </property>
+    <property name="text">
+     <string>Rock</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="paper">
+    <property name="geometry">
+     <rect>
+      <x>285</x>
+      <y>70</y>
+      <width>110</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    background: rgb(61, 56, 70);</string>
+    </property>
+    <property name="text">
+     <string>Paper</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="scissors">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>70</y>
+      <width>110</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    background: rgb(61, 56, 70);</string>
+    </property>
+    <property name="text">
+     <string>Scissors</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="status">
+    <property name="geometry">
+     <rect>
+      <x>105</x>
+      <y>170</y>
+      <width>471</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Сделайте свой выбор!</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>680</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
