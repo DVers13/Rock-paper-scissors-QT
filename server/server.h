@@ -11,7 +11,7 @@ class Server : public QTcpServer
 
 public:
     explicit Server(QObject *parent = nullptr);
-    void startServer();
+    void startServer(quint16 port);
 
 protected:
     void incomingConnection(qintptr socketDescriptor) override;

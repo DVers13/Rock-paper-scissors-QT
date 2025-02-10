@@ -3,12 +3,15 @@
 
 Server::Server(QObject *parent) : QTcpServer(parent){}
 
-void Server::startServer()
+void Server::startServer(quint16 port)
 {
-    if (!this->listen(QHostAddress::Any, 1234)) {
+    if (!this->listen(QHostAddress::Any, port))
+    {
         qDebug() << "Could not start server";
-    } else {
-        qDebug() << "Listening to port 1234...";
+    }
+    else
+    {
+        qDebug() << "Listening to port" << port;
     }
 }
 
