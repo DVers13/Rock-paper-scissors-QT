@@ -17,6 +17,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void connectToServer(const QString &ip, quint16 port);
 
 private slots:
     void onConnected();
@@ -31,7 +32,6 @@ private slots:
 private:
     Ui::MainWindow *ui;
     QTcpSocket *socket;
-    void connectToServer(const QString &ip, quint16 port);
     void sendChoice(int choice);
 
 };

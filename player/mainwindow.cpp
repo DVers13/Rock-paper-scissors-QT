@@ -19,8 +19,6 @@ MainWindow::MainWindow(QWidget *parent)
     socket = new QTcpSocket(this);
     connect(socket, &QTcpSocket::connected, this, &MainWindow::onConnected);
     connect(socket, &QTcpSocket::readyRead, this, &MainWindow::onReadyRead);
-
-    connectToServer("127.0.0.1", 1234);
 }
 
 MainWindow::~MainWindow()
@@ -41,19 +39,16 @@ void MainWindow::onReadyRead()
 
     if (winner == 0)
     {
-        qDebug() << "It's a draw!";
         ui->status->setStyleSheet(STATUS_DRAW);
         ui->status->setText("Ничья!");
     }
     else if (winner == 1)
     {
-        qDebug() << "You win!";
         ui->status->setStyleSheet(STATUS_WIN);
         ui->status->setText("Победа!");
     }
     else if (winner == 2)
     {
-        qDebug() << "You lose!";
         ui->status->setStyleSheet(STATUS_LOSE);
         ui->status->setText("Поражение =(");
     }
@@ -94,4 +89,3 @@ void MainWindow::on_scissors_clicked()
 {
     sendChoice(2);
 }
-
